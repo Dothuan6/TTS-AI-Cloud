@@ -191,19 +191,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2.5 text-xs">
               <li className="flex items-start gap-2 text-slate-600">
                 <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
-                <span>Trụ sở chính: Tòa nhà TuoitreSoft, Quận 1, TP. Hồ Chí Minh</span>
-              </li>
-              <li className="flex items-start gap-2 text-slate-600">
-                <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                <span>Chi nhánh: Ba Đình, Hà Nội & MBFC, Singapore</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=316+L%C3%AA+V%C4%83n+S%E1%BB%B9%2C+Ph%C6%B0%E1%BB%9Dng+1%2C+T%C3%A2n+B%C3%ACnh%2C+H%E1%BB%93+Ch%C3%AD+Minh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-600 transition-colors"
+                >
+                  Trụ sở chính: 316 Lê Văn Sỹ, Phường 1, Quận Tân Bình, TP. Hồ Chí Minh
+                </a>
               </li>
               <li className="flex items-center gap-2 text-slate-600">
                 <Phone className="w-4 h-4 text-sky-600 shrink-0" />
-                <span>Hotline 24/7: (+84) 28 7300 8899</span>
+                <a href="tel:+84909545966" className="hover:text-sky-600 transition-colors">
+                  Hotline 24/7: 090 954 59 66
+                </a>
               </li>
               <li className="flex items-center gap-2 text-slate-600">
                 <Mail className="w-4 h-4 text-sky-600 shrink-0" />
-                <span>contact@tuoitresoft.com</span>
+                <a href="mailto:lvphuc@tuoitresoft.com" className="hover:text-sky-600 transition-colors break-all">
+                  lvphuc@tuoitresoft.com
+                </a>
               </li>
             </ul>
           </div>
