@@ -1,0 +1,6 @@
+{
+  "name": "TuoitreSoft - Tư Vấn & Triển Khai Giải Pháp Cloud, AI & Quản Trị Doanh Nghiệp",
+  "description": "Hệ sinh thái tư vấn & triển khai giải pháp Cloud, AI, ERP/CRM/BPM, chuẩn hóa quy trình vận hành doanh nghiệp và đào tạo ứng dụng AI thực chiến mang lại ROI tối đa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
