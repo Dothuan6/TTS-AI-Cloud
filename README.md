@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TuoitreSoft – Website Giải pháp AI & Quản trị Cloud
 
 Website giới thiệu dịch vụ của TuoitreSoft: React 19 + Vite 6 + Tailwind CSS 4.
@@ -12,6 +13,9 @@ npm run lint     # kiểm tra TypeScript
 ```
 
 ## Trang & đường dẫn
+=======
+## Run Locally
+>>>>>>> f65e6f1eea6ee029aed284564952e2b7b816d77c
 
 | Trang | Đường dẫn |
 |---|---|

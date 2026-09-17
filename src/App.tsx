@@ -13,58 +13,93 @@ import { PhoneCall } from 'lucide-react';
 
 type PageRoute = 'home' | 'process-consulting' | 'ai-training';
 
+const SITE_URL = 'https://tts-ai-cloud-feddev.netlify.app';
+
+const PAGE_META: Record<PageRoute, { path: string; title: string; description: string }> = {
+  home: {
+    path: '/',
+    title: 'TuoitreSoft - Tư Vấn & Triển Khai Giải Pháp Cloud, AI & Quản Trị Doanh Nghiệp',
+    description: 'Hệ sinh thái tư vấn & triển khai giải pháp Cloud, AI, ERP/CRM/BPM, chuẩn hóa quy trình vận hành doanh nghiệp và đào tạo ứng dụng AI thực chiến mang lại ROI tối đa.',
+  },
+  'process-consulting': {
+    path: '/quy-trinh-van-hanh',
+    title: 'Chuẩn Hóa Quy Trình Vận Hành & Coach Đội Ngũ (SOP/BPM) | TuoitreSoft',
+    description: 'TuoitreSoft khảo sát hiện trạng 1-1 miễn phí và coach đội ngũ quản lý, vận hành tự xây dựng bộ SOP chuẩn BPMN 2.0, số hóa và tự động hóa quy trình doanh nghiệp.',
+  },
+  'ai-training': {
+    path: '/dao-tao-ai',
+    title: 'Tư Vấn & Đào Tạo AI In-House Cho Doanh Nghiệp | TuoitreSoft',
+    description: 'Workshop AI in-house tận văn phòng: chuyên gia TuoitreSoft khảo sát bài toán thực tế và huấn luyện đội ngũ ứng dụng AI an toàn trên chính dữ liệu của doanh nghiệp.',
+  },
+};
+
+const PATH_TO_PAGE: Record<string, PageRoute> = {
+  '/': 'home',
+  '/quy-trinh-van-hanh': 'process-consulting',
+  '/dao-tao-ai': 'ai-training',
+};
+
+const setMeta = (selector: string, attr: string, value: string) => {
+  const el = document.head.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+};
+
+const applySeo = (page: PageRoute) => {
+  const meta = PAGE_META[page];
+  const url = SITE_URL + meta.path;
+  document.title = meta.title;
+  setMeta('meta[name="description"]', 'content', meta.description);
+  setMeta('meta[property="og:title"]', 'content', meta.title);
+  setMeta('meta[property="og:description"]', 'content', meta.description);
+  setMeta('meta[property="og:url"]', 'content', url);
+  setMeta('link[rel="canonical"]', 'href', url);
+};
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageRoute>('home');
   const [consultInterest, setConsultInterest] = useState<string>('Tư vấn kiến trúc tổng thể');
 
-  // URL Hash Sync for robust routing across iframe & browser navigation
+  // Routing bằng đường dẫn thật (History API) để Google index được từng trang
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash === '#/quy-trinh-van-hanh' || hash === '#quy-trinh-van-hanh') {
-        setCurrentPage('process-consulting');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (hash === '#/dao-tao-ai' || hash === '#dao-tao-ai') {
-        setCurrentPage('ai-training');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (!hash || hash === '#/' || hash === '#') {
-        setCurrentPage('home');
+    const syncFromLocation = () => {
+      // Hỗ trợ link cũ dạng #/quy-trinh-van-hanh, #/dao-tao-ai
+      const legacy = window.location.hash.replace(/^#\/?/, '');
+      if (legacy && PATH_TO_PAGE['/' + legacy]) {
+        window.history.replaceState(null, '', '/' + legacy);
+      } else if (window.location.hash === '#/' || window.location.hash === '#') {
+        window.history.replaceState(null, '', window.location.pathname);
       }
+      const path = window.location.pathname.replace(/\/+$/, '') || '/';
+      const page = PATH_TO_PAGE[path] ?? 'home';
+      setCurrentPage(page);
+      applySeo(page);
     };
 
-    // Initial check on load
-    handleHashChange();
-
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    syncFromLocation();
+    window.addEventListener('popstate', syncFromLocation);
+    return () => window.removeEventListener('popstate', syncFromLocation);
   }, []);
 
   const handleNavigate = (page: PageRoute, targetSectionId?: string) => {
+    const path = PAGE_META[page].path;
+    if (window.location.pathname !== path) {
+      window.history.pushState(null, '', path);
+    }
     setCurrentPage(page);
+    applySeo(page);
 
-    // Update URL hash without reload
-    if (page === 'process-consulting') {
-      window.location.hash = '#/quy-trinh-van-hanh';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (page === 'ai-training') {
-      window.location.hash = '#/dao-tao-ai';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (page === 'home' && targetSectionId) {
+      // Chờ một nhịp để trang chủ render xong nếu đang chuyển từ trang khác
+      setTimeout(() => {
+        const el = document.getElementById(targetSectionId);
+        if (el) {
+          const navOffset = 80;
+          const offsetPosition = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      }, 80);
     } else {
-      window.location.hash = '#/';
-      if (targetSectionId) {
-        // Wait a frame if switching from another page
-        setTimeout(() => {
-          const el = document.getElementById(targetSectionId);
-          if (el) {
-            const navOffset = 80;
-            const elementPosition = el.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navOffset;
-            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-          }
-        }, 80);
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 

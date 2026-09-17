@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono text-[10px] border border-slate-200">
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono text-[11px] border border-slate-200">
               Fast Loading Core Web Vitals 99+
             </span>
           </div>
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <span className="font-display text-xl font-bold tracking-tight text-slate-900">
                   Tuoitre<span className="text-sky-600">Soft</span>
                 </span>
-                <p className="text-[10px] text-slate-500 font-medium">
+                <p className="text-[11px] text-slate-500 font-medium">
                   Tư Vấn & Triển Khai Giải Pháp Số Doanh Nghiệp
                 </p>
               </div>
@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             {/* Strategic Partners Box */}
             <div className="p-3.5 rounded-xl bg-white border border-slate-200 space-y-2 shadow-2xs">
-              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+              <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                 Đối Tác Hạ Tầng Chiến Lược:
               </div>
               <div className="flex flex-wrap gap-2 text-[11px]">
@@ -148,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="text-sky-600 hover:text-sky-700 font-bold transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <span>Tư Vấn Quy Trình Vận Hành</span>
-                  <span className="px-1 py-0.2 rounded bg-sky-100 text-sky-800 text-[9px] font-bold">MỚI</span>
+                  <span className="px-1 py-0.2 rounded bg-sky-100 text-sky-800 text-[11px] font-bold">MỚI</span>
                 </button>
               </li>
               <li>
@@ -157,7 +157,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="text-blue-600 hover:text-blue-700 font-bold transition-colors text-left cursor-pointer flex items-center gap-1.5"
                 >
                   <span>Đào Tạo AI Cho Doanh Nghiệp</span>
-                  <span className="px-1 py-0.2 rounded bg-blue-100 text-blue-800 text-[9px] font-bold">HOT</span>
+                  <span className="px-1 py-0.2 rounded bg-blue-100 text-blue-800 text-[11px] font-bold">HOT</span>
                 </button>
               </li>
               <li>

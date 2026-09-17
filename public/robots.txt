@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tts-ai-cloud-feddev.netlify.app/sitemap.xml

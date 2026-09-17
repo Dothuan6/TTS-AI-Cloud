@@ -24,7 +24,7 @@ export const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section id="process-section" className="py-16 lg:py-24 bg-white relative">
+    <section id="process-section" className="py-16 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -79,7 +79,7 @@ export const ProcessSection: React.FC = () => {
 
               {/* Output Deliverable Tag */}
               <div className="mt-5 pt-3 border-t border-slate-100 text-[11px] text-slate-500">
-                <span className="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Bàn giao:</span>
+                <span className="text-[11px] uppercase font-bold text-slate-400 block mb-0.5">Bàn giao:</span>
                 <span className="text-slate-800 font-semibold">{step.deliverable}</span>
               </div>
             </div>

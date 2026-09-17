@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="font-display text-xl font-extrabold text-slate-900 tracking-tight leading-none">
                 Tuoitre<span className="text-sky-600">Soft</span>
               </span>
-              <span className="text-[10px] text-slate-400 font-medium tracking-tight">
+              <span className="text-[11px] text-slate-400 font-medium tracking-tight">
                 Enterprise Cloud & AI Solutions
               </span>
             </div>
@@ -86,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <GitBranch className="w-3.5 h-3.5 text-sky-500" />
               <span>Tư Vấn Quy Trình</span>
-              <span className="px-1.5 py-0.2 rounded-sm bg-sky-100 text-sky-800 text-[10px] font-extrabold">BPM</span>
+              <span className="px-1.5 py-0.2 rounded-sm bg-sky-100 text-sky-800 text-[11px] font-extrabold">BPM</span>
             </button>
 
             {/* 3. Landing Page: Đào Tạo AI Doanh Nghiệp */}
@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <Bot className="w-3.5 h-3.5 text-sky-500" />
               <span>Đào Tạo AI</span>
-              <span className="px-1.5 py-0.2 rounded-sm bg-blue-100 text-blue-800 text-[10px] font-extrabold">In-house</span>
+              <span className="px-1.5 py-0.2 rounded-sm bg-blue-100 text-blue-800 text-[11px] font-extrabold">In-house</span>
             </button>
 
             {/* 4. Giải Pháp Cloud & ERP/CRM */}
@@ -117,13 +117,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('home', 'partners-section')}
               className="hover:text-sky-600 transition-colors cursor-pointer py-1"
             >
-              Đối tác (Cloud Ace & Titanbases)
+              Đối tác
             </button>
 
           </nav>
 
           {/* Single Clean Primary Action Button */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <button 
               id="btn-nav-consultation"
               onClick={() => {
@@ -200,7 +200,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <GitBranch className="w-4 h-4 text-sky-600" />
                 <span>Tư Vấn Quy Trình Vận Hành</span>
               </span>
-              <span className="px-2 py-0.5 rounded-sm bg-sky-100 text-sky-800 text-[10px] font-bold">BPM</span>
+              <span className="px-2 py-0.5 rounded-sm bg-sky-100 text-sky-800 text-[11px] font-bold">BPM</span>
             </button>
 
             <button 
@@ -213,7 +213,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <Bot className="w-4 h-4 text-sky-600" />
                 <span>Đào Tạo AI Doanh Nghiệp</span>
               </span>
-              <span className="px-2 py-0.5 rounded-sm bg-blue-100 text-blue-800 text-[10px] font-bold">In-house</span>
+              <span className="px-2 py-0.5 rounded-sm bg-blue-100 text-blue-800 text-[11px] font-bold">In-house</span>
             </button>
 
             <button 
@@ -227,7 +227,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('home', 'partners-section')}
               className="text-left py-2.5 px-3 rounded-lg hover:bg-slate-50 text-slate-700"
             >
-              Đối tác chiến lược (Cloud Ace & Titanbases)
+              Đối tác chiến lược
             </button>
 
           </nav>

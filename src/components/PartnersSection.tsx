@@ -70,7 +70,7 @@ export const PartnersSection: React.FC = () => {
                 <Cpu className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="text-[10px] font-bold text-sky-700 uppercase tracking-widest">Enterprise Platform</div>
+                <div className="text-[11px] font-bold text-sky-700 uppercase tracking-widest">Enterprise Platform</div>
                 <h3 className="font-display text-2xl font-black text-slate-900 mt-0.5">TuoitreSoft Hub</h3>
               </div>
               <p className="text-xs text-slate-600">

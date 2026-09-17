@@ -38,7 +38,7 @@ import {
   CONSULTING_PACKAGES, 
   PROCESS_FAQS 
 } from '../data/processConsultingData';
-import processHeroImg from '../assets/images/process-hero.jpg';
+import processHeroImg from '../assets/images/process-hero.webp';
 
 interface ProcessConsultingPageProps {
   onNavigateHome: () => void;
@@ -217,12 +217,6 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                     referrerPolicy="no-referrer"
                     loading="eager"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    onError={(e) => {
-                      const img = e.currentTarget;
-                      if (img.src !== window.location.origin + '/images/process-hero.jpg') {
-                        img.src = '/images/process-hero.jpg';
-                      }
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
                 </div>
@@ -231,7 +225,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                 <div className="absolute top-4 left-4 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-emerald-200 text-xs shadow-lg flex items-center gap-2">
                   <Gift className="w-4 h-4 text-emerald-600" />
                   <div>
-                    <div className="text-[10px] text-emerald-700 font-bold uppercase">Tài Trợ 100% Miễn Phí</div>
+                    <div className="text-[11px] text-emerald-700 font-bold uppercase">Tài Trợ 100% Miễn Phí</div>
                     <div className="font-bold text-slate-900 text-xs">Khảo Sát 1-1 & Coach Đội Ngũ</div>
                   </div>
                 </div>
@@ -243,11 +237,11 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                       <Check className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-[10px] text-slate-500 font-medium">Cam kết thời gian xử lý</div>
+                      <div className="text-[11px] text-slate-500 font-medium">Cam kết thời gian xử lý</div>
                       <div className="font-bold text-slate-900">SLA 15 Phút Phê Duyệt Số</div>
                     </div>
                   </div>
-                  <div className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">
+                  <div className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
                     Zero Paperwork
                   </div>
                 </div>
@@ -371,7 +365,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                     </p>
                     <div className="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-emerald-50 border border-sky-200 text-xs text-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <div className="text-sky-700 font-bold uppercase text-[10px] tracking-wider">Đề xuất gói giải pháp phù hợp:</div>
+                        <div className="text-sky-700 font-bold uppercase text-[11px] tracking-wider">Đề xuất gói giải pháp phù hợp:</div>
                         <div className="font-extrabold text-slate-900 text-sm mt-0.5">{assessment.recommendPackage}</div>
                       </div>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold shrink-0 self-start sm:self-center">
@@ -735,7 +729,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-100 bg-slate-50 p-3 rounded-xl">
-                  <div className="text-[10px] text-slate-400 font-bold uppercase">Sản Phẩm Bàn Giao:</div>
+                  <div className="text-[11px] text-slate-400 font-bold uppercase">Sản Phẩm Bàn Giao:</div>
                   <div className="text-xs font-bold text-slate-900 mt-0.5">{step.deliverables}</div>
                 </div>
               </div>
@@ -786,7 +780,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                   <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Kết Quả Đạt Được:</div>
                   {domain.keyOutcomes.map((out, outIdx) => (
                     <div key={outIdx} className="text-xs text-slate-700 flex items-start gap-2">
-                      <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold">✓</div>
+                      <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 text-[11px] font-bold">✓</div>
                       <span className="leading-relaxed">{out}</span>
                     </div>
                   ))}
@@ -935,7 +929,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                       {isFreePkg && (
                         <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
                           <div>
-                            <div className="text-[10px] text-emerald-800 font-bold uppercase">Chính sách tài trợ</div>
+                            <div className="text-[11px] text-emerald-800 font-bold uppercase">Chính sách tài trợ</div>
                             <div className="font-mono text-lg font-black text-emerald-600">0 ĐỒNG / MIỄN PHÍ</div>
                           </div>
                           <div className="text-[11px] text-slate-500 line-through">15.000.000đ</div>
@@ -1152,15 +1146,15 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 via-sky-600 to-blue-600 hover:from-emerald-700 hover:via-sky-700 hover:to-blue-700 text-white font-bold text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all active:scale-95 cursor-pointer"
+                  className="w-full py-3.5 px-5 rounded-xl text-center leading-snug bg-gradient-to-r from-emerald-600 via-sky-600 to-blue-600 hover:from-emerald-700 hover:via-sky-700 hover:to-blue-700 text-white font-bold text-sm shadow-md shadow-sky-500/25 flex items-center justify-center gap-2 transition-all active:scale-95 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>Đang gửi thông tin...</span>
                   ) : (
                     <>
-                      <Gift className="w-4 h-4 text-emerald-200" />
+                      <Gift className="w-4 h-4 shrink-0 text-emerald-200" />
                       <span>Gửi Yêu Cầu Nhận Suất Khảo Sát & Coach Miễn Phí (Trị Giá 15Tr)</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 shrink-0" />
                     </>
                   )}
                 </button>

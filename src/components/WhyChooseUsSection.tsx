@@ -62,7 +62,7 @@ export const WhyChooseUsSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-sky-600">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-600">
                     {pillar.highlight}
                   </span>
                   <h3 className="font-display text-base font-bold text-slate-900 mt-0.5 group-hover:text-sky-600 transition-colors">
@@ -139,7 +139,7 @@ export const WhyChooseUsSection: React.FC = () => {
 
             {/* Column 3: TuoitreSoft Ecosystem (Highlighted) */}
             <div className="p-5 rounded-2xl bg-gradient-to-b from-sky-50/90 via-white to-sky-50/60 border-2 border-sky-500 space-y-4 relative shadow-lg shadow-sky-500/10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-700 text-[10px] font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-700 text-[11px] font-bold uppercase tracking-wider">
                 <Sparkles className="w-3 h-3" />
                 <span>Giải pháp tối ưu nhất</span>
               </div>

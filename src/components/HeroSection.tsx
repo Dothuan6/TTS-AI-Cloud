@@ -11,7 +11,7 @@ import {
   Clock
 } from 'lucide-react';
 import { HERO_CONTENT } from '../data/content';
-import heroImg from '../assets/images/hero_cloud_ai_hub_1788510177828.jpg';
+import heroImg from '../assets/images/hero-hub.webp';
 
 interface HeroSectionProps {
   onRegisterClick: () => void;
@@ -107,40 +107,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   referrerPolicy="no-referrer"
                   loading="eager"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                  onError={(e) => {
-                    const img = e.currentTarget;
-                    if (img.src !== window.location.origin + '/images/hero-hub.jpg') {
-                      img.src = '/images/hero-hub.jpg';
-                    }
-                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
               </div>
 
-              {/* Floating Glassmorphism Badge 1: Turnkey Delivery */}
-              <div className="absolute top-4 right-4 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-xs shadow-lg flex items-center gap-2">
-                <Award className="w-4 h-4 text-sky-600" />
-                <div>
-                  <div className="text-[10px] text-slate-500 font-medium">Phương Thức Hợp Tác</div>
+              {/* Floating Badge 1: Turnkey Delivery */}
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-xs shadow-lg flex items-center gap-2 max-w-[calc(100%-1.5rem)]">
+                <Award className="w-4 h-4 text-sky-600 shrink-0" />
+                <div className="min-w-0">
+                  <div className="text-[11px] text-slate-500 font-medium">Phương Thức Hợp Tác</div>
                   <div className="font-bold text-slate-900 text-xs">Tư Vấn & Triển Khai Trọn Gói</div>
                 </div>
               </div>
 
-              {/* Floating Glassmorphism Badge 2: FinOps Cost Reduction */}
-              <div className="absolute bottom-4 left-4 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-emerald-200 text-xs shadow-lg flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                  <TrendingDown className="w-4 h-4" />
+              {/* Badges 2 & 3: nằm dưới ảnh trên mobile, nổi trên ảnh từ màn hình sm trở lên */}
+              <div className="flex flex-wrap items-center gap-2 p-3 sm:p-0 sm:absolute sm:bottom-4 sm:left-4 sm:right-4 sm:justify-between">
+                <div className="px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-emerald-200 text-xs shadow-lg flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                    <TrendingDown className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] text-slate-500 font-medium">Tối Ưu Vận Hành & FinOps</div>
+                    <div className="font-bold text-emerald-700 text-xs whitespace-nowrap">Cắt Giảm 30% - 50% Chi Phí</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-[10px] text-slate-500 font-medium">Tối Ưu Vận Hành & FinOps</div>
-                  <div className="font-bold text-emerald-700 text-xs">Cắt Giảm 30% - 50% Chi Phí</div>
-                </div>
-              </div>
 
-              {/* Floating Glassmorphism Badge 3: SLA & ROI */}
-              <div className="absolute bottom-4 right-4 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-sky-200 text-xs shadow-lg flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></div>
-                <div className="font-mono text-sky-700 text-xs font-bold">Cam Kết SLA 99.99%</div>
+                <div className="px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-sky-200 text-xs shadow-lg flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0"></div>
+                  <div className="font-mono text-sky-700 text-xs font-bold whitespace-nowrap">Cam Kết SLA 99.99%</div>
+                </div>
               </div>
 
             </div>

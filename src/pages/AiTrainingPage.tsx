@@ -36,7 +36,7 @@ import {
   AI_TRAINING_PACKAGES, 
   AI_FAQS 
 } from '../data/aiTrainingData';
-import aiTrainHeroImg from '../assets/images/ai-train-hero.jpg';
+import aiTrainHeroImg from '../assets/images/ai-train-hero.webp';
 
 interface AiTrainingPageProps {
   onNavigateHome: () => void;
@@ -201,12 +201,6 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                     referrerPolicy="no-referrer"
                     loading="eager"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    onError={(e) => {
-                      const img = e.currentTarget;
-                      if (img.src !== window.location.origin + '/images/ai-train-hero.jpg') {
-                        img.src = '/images/ai-train-hero.jpg';
-                      }
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
                 </div>
@@ -215,7 +209,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                 <div className="absolute top-4 right-4 px-3.5 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-emerald-300 text-xs shadow-lg flex items-center gap-2">
                   <Gift className="w-4 h-4 text-emerald-600" />
                   <div>
-                    <div className="text-[10px] text-emerald-700 font-bold uppercase tracking-wider">Chính Sách Đồng Hành</div>
+                    <div className="text-[11px] text-emerald-700 font-bold uppercase tracking-wider">Chính Sách Đồng Hành</div>
                     <div className="font-bold text-slate-900 text-xs">Tài Trợ 100% Workshop In-House Tận Nơi</div>
                   </div>
                 </div>
@@ -227,11 +221,11 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                       <Lock className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-[10px] text-slate-500 font-medium">Bảo vệ bí mật kinh doanh</div>
+                      <div className="text-[11px] text-slate-500 font-medium">Bảo vệ bí mật kinh doanh</div>
                       <div className="font-bold text-slate-900">Cam Kết Không Dùng Dữ Liệu Train AI</div>
                     </div>
                   </div>
-                  <div className="px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 text-[10px] font-bold">
+                  <div className="px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 text-[11px] font-bold">
                     Opt-out Privacy
                   </div>
                 </div>
@@ -486,7 +480,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             
             {/* Pillar 1 */}
             <div className="bg-white rounded-2xl border-2 border-emerald-200 p-7 shadow-lg shadow-emerald-500/5 hover:border-emerald-400 transition-all flex flex-col justify-between relative">
-              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-extrabold uppercase tracking-wider">
+              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-extrabold uppercase tracking-wider">
                 Giai Đoạn 1: Khảo Sát 1-1
               </div>
               <div className="space-y-4 pt-2">
@@ -525,7 +519,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
 
             {/* Pillar 2 */}
             <div className="bg-white rounded-2xl border-2 border-sky-400 p-7 shadow-xl shadow-sky-500/10 hover:border-sky-500 transition-all flex flex-col justify-between relative ring-2 ring-sky-500/20">
-              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-sky-600 text-white text-[10px] font-extrabold uppercase tracking-wider">
+              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-sky-600 text-white text-[11px] font-extrabold uppercase tracking-wider">
                 Giai Đoạn 2: Workshop In-House
               </div>
               <div className="space-y-4 pt-2">
@@ -564,7 +558,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
 
             {/* Pillar 3 */}
             <div className="bg-white rounded-2xl border-2 border-indigo-200 p-7 shadow-lg shadow-indigo-500/5 hover:border-indigo-400 transition-all flex flex-col justify-between relative">
-              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] font-extrabold uppercase tracking-wider">
+              <div className="absolute -top-3.5 left-6 px-3 py-0.5 rounded-full bg-indigo-600 text-white text-[11px] font-extrabold uppercase tracking-wider">
                 Giai Đoạn 3: Bàn Giao & Bảo Vệ
               </div>
               <div className="space-y-4 pt-2">
@@ -1132,15 +1126,15 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-sky-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition-all active:scale-95 cursor-pointer"
+                  className="w-full py-4 px-5 rounded-xl text-center leading-snug bg-gradient-to-r from-emerald-600 via-sky-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition-all active:scale-95 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <span>Đang ghi nhận yêu cầu tài trợ...</span>
                   ) : (
                     <>
-                      <Gift className="w-5 h-5 text-emerald-200" />
+                      <Gift className="w-5 h-5 shrink-0 text-emerald-200" />
                       <span>Gửi Yêu Cầu Nhận Suất Đào Tạo AI In-House Miễn Phí (Trị Giá 20Tr)</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 shrink-0" />
                     </>
                   )}
                 </button>

@@ -93,7 +93,7 @@ export const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
               onChange={(e) => setCloudSpendMonthly(Number(e.target.value))}
               className="w-full accent-sky-500 cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+            <div className="flex justify-between text-[11px] text-slate-500 font-mono">
               <span>$300/tháng</span>
               <span>$7,500/tháng</span>
               <span>$15,000+/tháng</span>
@@ -159,7 +159,7 @@ export const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
               <div className="text-lg font-bold text-sky-600 font-mono mt-1">
                 ${annualCloudSavingsUSD.toLocaleString()}
               </div>
-              <div className="text-[10px] text-slate-500">Giảm ~38% hóa đơn GCP/AWS</div>
+              <div className="text-[11px] text-slate-500">Giảm ~38% hóa đơn GCP/AWS</div>
             </div>
 
             <div className="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">
@@ -167,7 +167,7 @@ export const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
               <div className="text-lg font-bold text-emerald-700 font-mono mt-1">
                 {monthlyHoursSaved * 12} giờ/năm
               </div>
-              <div className="text-[10px] text-slate-500">Nhờ OCR AI & Chatbot RAG</div>
+              <div className="text-[11px] text-slate-500">Nhờ OCR AI & Chatbot RAG</div>
             </div>
 
             <div className="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">
@@ -175,7 +175,7 @@ export const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
               <div className="text-lg font-bold text-amber-600 font-mono mt-1">
                 ~{totalAnnualSavingsVND.toLocaleString()}M VNĐ
               </div>
-              <div className="text-[10px] text-slate-500">Thời gian hoàn vốn &lt; 4 tháng</div>
+              <div className="text-[11px] text-slate-500">Thời gian hoàn vốn &lt; 4 tháng</div>
             </div>
           </div>
         </div>

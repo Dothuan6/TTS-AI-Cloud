@@ -16,14 +16,14 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { SOLUTIONS_DATA } from '../data/content';
-import cloudMigrationImg from '../assets/images/cloud-migration.jpg';
-import aiChatbotImg from '../assets/images/ai-chatbot.jpg';
-import aiAnalyticsImg from '../assets/images/ai-analytics.jpg';
-import rpaDocumentImg from '../assets/images/rpa-document.jpg';
-import erpSystemImg from '../assets/images/erp-system.jpg';
-import crmSystemImg from '../assets/images/crm-system.jpg';
-import bpmWorkflowImg from '../assets/images/bpm-workflow.jpg';
-import hrmSystemImg from '../assets/images/hrm-system.jpg';
+import cloudMigrationImg from '../assets/images/cloud-migration.webp';
+import aiChatbotImg from '../assets/images/ai-chatbot.webp';
+import aiAnalyticsImg from '../assets/images/ai-analytics.webp';
+import rpaDocumentImg from '../assets/images/rpa-document.webp';
+import erpSystemImg from '../assets/images/erp-system.webp';
+import crmSystemImg from '../assets/images/crm-system.webp';
+import bpmWorkflowImg from '../assets/images/bpm-workflow.webp';
+import hrmSystemImg from '../assets/images/hrm-system.webp';
 
 interface SolutionsSectionProps {
   onSelectSolutionForConsult: (solutionTitle: string, category: string) => void;
@@ -62,7 +62,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({
   };
 
   return (
-    <section id="solutions-section" className="py-16 lg:py-24 relative bg-white">
+    <section id="solutions-section" className="py-16 lg:py-24 relative bg-white overflow-hidden">
       
       {/* Background radial glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-sky-400/5 blur-[160px] pointer-events-none rounded-full" />
@@ -119,7 +119,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({
         {/* Visual Cards Grid with Rich Imagery and Tangible Business Impact */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredSolutions.map((solution) => {
-            const imageUrl = SOLUTION_IMAGES[solution.id] || `/images/${solution.id}.jpg`;
+            const imageUrl = SOLUTION_IMAGES[solution.id];
             
             return (
               <div
@@ -136,13 +136,6 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({
                       referrerPolicy="no-referrer"
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        const fallbackPath = `/images/${solution.id}.jpg`;
-                        if (target.src !== window.location.origin + fallbackPath) {
-                          target.src = fallbackPath;
-                        }
-                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none"></div>
                     
@@ -173,7 +166,7 @@ export const SolutionsSection: React.FC<SolutionsSectionProps> = ({
                       {solution.technologies.slice(0, 3).map((tech, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200"
+                          className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200"
                         >
                           {tech}
                         </span>

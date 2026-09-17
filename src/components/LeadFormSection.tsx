@@ -439,17 +439,17 @@ Hotline hỗ trợ 24/7: (+84) 28 7300 8899 | Email: contact@tuoitresoft.com
                   id="btn-submit-lead-form"
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-extrabold text-base shadow-xl shadow-sky-500/25 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 active:scale-[0.99]"
+                  className="w-full py-4 px-5 rounded-xl text-center leading-snug bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-extrabold text-sm sm:text-base shadow-xl shadow-sky-500/25 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 active:scale-[0.99]"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 shrink-0 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Đang Gửi Yêu Cầu...</span>
                     </>
                   ) : (
                     <>
                       <span>Gửi Yêu Cầu Tư Vấn & Nhận Solution Brief 0đ</span>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 shrink-0" />
                     </>
                   )}
                 </button>
