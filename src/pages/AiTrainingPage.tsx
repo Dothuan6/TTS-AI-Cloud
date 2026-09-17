@@ -264,9 +264,9 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                 
                 {/* Employee Count Slider */}
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-sm font-bold text-slate-700">
+                  <div className="flex justify-between items-start gap-3 text-sm font-bold text-slate-700">
                     <span>Số lượng nhân sự tham gia đào tạo:</span>
-                    <span className="font-mono text-sky-600 text-base">{employeeCount} Nhân sự</span>
+                    <span className="font-mono text-sky-600 text-base whitespace-nowrap">{employeeCount} Nhân sự</span>
                   </div>
                   <input
                     type="range"
@@ -286,9 +286,9 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
 
                 {/* Salary Slider */}
                 <div className="space-y-2">
-                  <div className="flex justify-between items-center text-sm font-bold text-slate-700">
+                  <div className="flex justify-between items-start gap-3 text-sm font-bold text-slate-700">
                     <span>Mức lương trung bình tháng:</span>
-                    <span className="font-mono text-emerald-600 text-base">{avgSalaryMillion} Triệu VNĐ</span>
+                    <span className="font-mono text-emerald-600 text-base whitespace-nowrap">{avgSalaryMillion} Triệu VNĐ</span>
                   </div>
                   <input
                     type="range"
@@ -411,7 +411,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             
             <div className="p-6 rounded-2xl border border-slate-200 bg-white space-y-3 hover:border-sky-300 transition-all">
               <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold">
@@ -476,7 +476,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
           </div>
 
           {/* 3 Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             
             {/* Pillar 1 */}
             <div className="bg-white rounded-2xl border-2 border-emerald-200 p-7 shadow-lg shadow-emerald-500/5 hover:border-emerald-400 transition-all flex flex-col justify-between relative">
@@ -602,7 +602,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             <div className="text-center font-bold text-slate-900 text-sm uppercase tracking-wider mb-6">
               3 CAM KẾT VÀNG TỪ TUOITRESOFT TRONG CHƯƠNG TRÌNH TÀI TRỢ IN-HOUSE
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="flex items-start gap-3.5">
                 <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0 text-sm">
                   1
@@ -727,7 +727,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
 
                 {/* Outcome Statement */}
                 <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs sm:text-sm text-emerald-900 flex items-start gap-2.5">
-                  <span className="font-extrabold text-emerald-700">Kết quả đầu ra:</span>
+                  <span className="font-extrabold text-emerald-700 whitespace-nowrap shrink-0">Kết quả đầu ra:</span>
                   <span className="leading-relaxed">{activeModule.outcomes}</span>
                 </div>
               </div>
@@ -787,7 +787,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {AI_TRAINING_METHODOLOGY.map((step, idx) => (
               <div 
                 key={idx}
@@ -826,7 +826,7 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {AI_SECURITY_PILLARS.map((sec, idx) => (
               <div 
                 key={idx}
@@ -895,8 +895,8 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
                       <h3 className="font-display text-xl font-bold text-slate-900">{pkg.name}</h3>
                       
                       {isFreePkg && (
-                        <div className="flex items-baseline gap-2 pt-1">
-                          <span className="font-mono text-2xl font-black text-emerald-600">0 ĐỒNG / MIỄN PHÍ</span>
+                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 pt-1">
+                          <span className="font-mono text-xl sm:text-2xl font-black text-emerald-600 whitespace-nowrap">0 ĐỒNG / MIỄN PHÍ</span>
                           <span className="text-xs text-slate-400 line-through">20.000.000đ</span>
                         </div>
                       )}
@@ -1203,10 +1203,10 @@ export const AiTrainingPage: React.FC<AiTrainingPageProps> = ({
             <div className="text-lg font-bold">Khám phá thêm: Tư Vấn & Chuẩn Hóa Quy Trình Vận Hành Doanh Nghiệp</div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={onNavigateHome}
-              className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all"
+              className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all whitespace-nowrap"
             >
               Về Trang Chủ
             </button>

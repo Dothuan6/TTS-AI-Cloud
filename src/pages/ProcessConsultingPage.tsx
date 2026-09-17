@@ -425,7 +425,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
           </div>
 
           {/* 3 Pillars Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-14">
             
             {/* Pillar 1: Audit 1-1 */}
             <div className="p-7 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-sky-300 transition-all flex flex-col justify-between group">
@@ -434,7 +434,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                   <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold group-hover:bg-sky-500 group-hover:text-white transition-colors">
                     <Search className="w-6 h-6" />
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 text-[11px] font-bold">
+                  <span className="px-2.5 py-1 rounded-full bg-sky-100 text-sky-800 text-[11px] font-bold whitespace-nowrap">
                     Trị giá: 10.000.000đ → 0đ
                   </span>
                 </div>
@@ -483,7 +483,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     <GraduationCap className="w-6 h-6" />
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
+                  <span className="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold whitespace-nowrap">
                     Trị giá: 15.000.000đ → Tặng Kèm
                   </span>
                 </div>
@@ -527,7 +527,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                   <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold group-hover:bg-blue-500 group-hover:text-white transition-colors">
                     <BookOpen className="w-6 h-6" />
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 text-[11px] font-bold">
+                  <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 text-[11px] font-bold whitespace-nowrap">
                     Trị giá: 5.000.000đ → Bàn Giao
                   </span>
                 </div>
@@ -670,7 +670,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                 </div>
                 
                 <div className="mt-5 pt-4 border-t border-slate-100 flex items-start gap-2 text-xs font-semibold text-rose-700 bg-rose-50/60 p-3 rounded-lg">
-                  <span className="font-bold">Hệ quả:</span>
+                  <span className="font-bold whitespace-nowrap shrink-0">Hệ quả:</span>
                   <span>{pain.impact}</span>
                 </div>
               </div>
@@ -697,7 +697,7 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {PROCESS_METHODOLOGY_STEPS.map((step, idx) => (
               <div 
                 key={idx}
@@ -930,9 +930,9 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
                         <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
                           <div>
                             <div className="text-[11px] text-emerald-800 font-bold uppercase">Chính sách tài trợ</div>
-                            <div className="font-mono text-lg font-black text-emerald-600">0 ĐỒNG / MIỄN PHÍ</div>
+                            <div className="font-mono text-lg font-black text-emerald-600 whitespace-nowrap">0 ĐỒNG / MIỄN PHÍ</div>
                           </div>
-                          <div className="text-[11px] text-slate-500 line-through">15.000.000đ</div>
+                          <div className="text-[11px] text-slate-500 line-through shrink-0 ml-2">15.000.000đ</div>
                         </div>
                       )}
 
@@ -1220,10 +1220,10 @@ export const ProcessConsultingPage: React.FC<ProcessConsultingPageProps> = ({
             <div className="text-lg font-bold">Khám phá thêm: Khóa Đào Tạo Ứng Dụng AI Thực Chiến Cho Doanh Nghiệp</div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={onNavigateHome}
-              className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all"
+              className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all whitespace-nowrap"
             >
               Về Trang Chủ
             </button>

@@ -147,10 +147,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Measurable Business ROI Strip */}
-        <div className="mt-14 pt-8 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-14 pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 sm:gap-6">
           {HERO_CONTENT.stats.map((stat, idx) => (
             <div key={idx} className="space-y-0.5">
-              <div className="text-2xl sm:text-3xl font-extrabold font-display text-slate-900">{stat.value}</div>
+              <div className="text-lg min-[360px]:text-xl sm:text-3xl font-extrabold font-display text-slate-900 whitespace-nowrap">{stat.value}</div>
               <div className="text-xs font-bold text-sky-600">{stat.label}</div>
               <div className="text-[11px] text-slate-500">{stat.sub}</div>
             </div>

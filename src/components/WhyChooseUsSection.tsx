@@ -49,7 +49,7 @@ export const WhyChooseUsSection: React.FC = () => {
         </div>
 
         {/* 4 Core Pillars Grid: Visual & Breathable */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-14">
           {WHY_CHOOSE_US.map((pillar) => (
             <div
               key={pillar.id}
@@ -95,7 +95,7 @@ export const WhyChooseUsSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             
             {/* Column 1: Traditional Outsourcing */}
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">

@@ -53,10 +53,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-10">
           
           {/* Col 1: Brand & Overview (Spans 2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-5">
+          <div className="md:col-span-2 xl:col-span-2 space-y-5">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img
                 src={logoIcon}
@@ -114,22 +114,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   AI Chatbot & Trợ Lý Ảo
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   BigQuery & Redshift BI
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   RPA + AI Số Hóa Chứng Từ
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   Cloud Migration & FinOps
                 </button>
               </li>
@@ -161,22 +161,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   Hệ Thống ERP Toàn Diện
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   Hệ Thống CRM Đa Kênh
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   BPM & Quy Trình Không Giấy Tờ
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('solutions-section')} className="text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
+                <button onClick={() => scrollTo('solutions-section')} className="py-1 sm:py-0 text-slate-600 hover:text-sky-600 transition-colors text-left cursor-pointer">
                   HRM Quản Trị Nhân Sự & KPI
                 </button>
               </li>
@@ -188,7 +188,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h4 className="font-display text-sm font-bold text-slate-900 uppercase tracking-wider">
               Thông Tin Liên Hệ
             </h4>
-            <ul className="space-y-2.5 text-xs">
+            <ul className="space-y-1.5 sm:space-y-2.5 text-xs">
               <li className="flex items-start gap-2 text-slate-600">
                 <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                 <a

@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-slate-600">
             
             {/* 1. Trang Chủ */}
             <button 
@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* Single Clean Primary Action Button */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             <button 
               id="btn-nav-consultation"
               onClick={() => {
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 xl:hidden">
             <button 
               id="btn-mobile-consultation"
               onClick={() => {
@@ -178,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Clean Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-5 py-4 space-y-2 shadow-xl">
+        <div className="xl:hidden bg-white border-b border-slate-200 px-5 py-4 space-y-2 shadow-xl">
           <nav className="flex flex-col space-y-1 text-sm font-medium text-slate-700">
             
             <button 

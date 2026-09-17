@@ -283,7 +283,7 @@ export const LeadFormSection: React.FC<LeadFormSectionProps> = ({ initialInteres
                   <span className="text-[11px] text-slate-500 font-normal">Chọn đúng mục tiêu để nhận tài liệu phù hợp</span>
                 </label>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {interestOptions.map((opt) => {
                     const isChecked = formData.interests.includes(opt.label);
                     return (
@@ -303,9 +303,9 @@ export const LeadFormSection: React.FC<LeadFormSectionProps> = ({ initialInteres
                         }`}>
                           {isChecked && '✓'}
                         </div>
-                        <div className="flex items-center gap-1.5 truncate">
+                        <div className="flex items-center gap-1.5 min-w-0 text-left">
                           {opt.icon}
-                          <span className="truncate">{opt.label}</span>
+                          <span className="leading-snug">{opt.label}</span>
                         </div>
                       </button>
                     );
