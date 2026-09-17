@@ -13,7 +13,6 @@ import {
   MoreHorizontal,
   Clock,
   ShieldCheck,
-  Download,
   Share2,
   RefreshCw,
   Sparkles,
@@ -118,36 +117,6 @@ export const LeadFormSection: React.FC<LeadFormSectionProps> = ({ initialInteres
     }, 1200);
   };
 
-  const handleDownloadReceipt = () => {
-    if (!submittedResult) return;
-    const content = `PHIẾU ĐĂNG KÝ TƯ VẤN KIẾN TRÚC & GIẢI PHÁP TUOITRESOFT
-Mã đăng ký: ${submittedResult.id}
-Thời gian ghi nhận: ${submittedResult.createdAt}
---------------------------------------------------
-Họ và tên: ${submittedResult.data.fullName}
-Doanh nghiệp: ${submittedResult.data.companyName}
-Thông tin liên hệ: ${submittedResult.data.phoneOrEmail}
-Quy mô doanh nghiệp: ${submittedResult.data.companySize}
-Nhu cầu giải pháp: ${submittedResult.data.interests.join(', ')} ${submittedResult.data.customInterest ? `(${submittedResult.data.customInterest})` : ''}
-Ngân sách dự kiến: ${submittedResult.data.projectBudget}
-Thời gian mong muốn triển khai: ${submittedResult.data.timeline}
-Ghi chú: ${submittedResult.data.notes || 'Không có'}
---------------------------------------------------
-Cam kết dịch vụ:
-- Kỹ sư giải pháp TuoitreSoft liên hệ lại trong vòng 30 phút.
-- Khảo sát hiện trạng & tư vấn kiến trúc Multi-Cloud (GCP/AWS) hoàn toàn miễn phí.
-Hotline hỗ trợ 24/7: (+84) 28 7300 8899 | Email: contact@tuoitresoft.com
-`;
-
-    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `TuoitreSoft-Yeu-Cau-Tu-Van-${submittedResult.id}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
   const handleResetForm = () => {
     setSubmittedResult(null);
     setFormData({
@@ -235,14 +204,6 @@ Hotline hỗ trợ 24/7: (+84) 28 7300 8899 | Email: contact@tuoitresoft.com
 
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                <button
-                  onClick={handleDownloadReceipt}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold border border-slate-300 transition-colors cursor-pointer"
-                >
-                  <Download className="w-4 h-4 text-sky-600" />
-                  <span>Tải Phiếu Xác Nhận (.txt)</span>
-                </button>
-
                 <button
                   onClick={handleResetForm}
                   className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white text-xs font-bold transition-colors cursor-pointer shadow-md shadow-sky-500/20"
